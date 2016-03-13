@@ -8,7 +8,7 @@
 
   I'm Hu Boshen, a junior in the Department of Physical Science and Technology at the Wuhan University.
   
-##Homeworks
+##Assignments
 
   [Exercise3](https://github.com/endeavor19/computationalphysics_N2013301020025/blob/master/exercise/Exercise3) 
   
