@@ -2,7 +2,7 @@
 
 ##Introduction
 
-  This repository is established for the Computational Physics course by instrutor Cai. in the Department of Physical science and technology. 
+  This repository is established for the Computational Physics course by instructor Cai. in the Department of Physical science and technology. 
   
 ##Homeworks
 
