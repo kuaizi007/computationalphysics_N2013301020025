@@ -1,5 +1,5 @@
 # **Computational Physics**
 
-## 作业
-  
-  	见 [exercise]
+## Exercises
+
+* [Exercises3](https://raw.githubusercontent.com/endeavor19/computationalphysics_N2013301020025/master/exercise/Exercise3) 
