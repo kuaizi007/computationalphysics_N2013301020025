@@ -2,4 +2,4 @@
 
 ## 作业
   
-  	所有作业都列在[exercises](exercises)里面
+  	所有作业都列在[exercise](exercise)里面
