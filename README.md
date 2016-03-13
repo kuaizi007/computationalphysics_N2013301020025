@@ -2,7 +2,11 @@
 
 ##Introduction
 
-  This repository is established for the Computational Physics course by instructor Cai. in the Department of Physical science and technology. 
+  This repository is established for the Computational Physics course by instructor Prof. Cai.
+  
+##About
+
+  I'm Hu Boshen, a junior in the Department of Physical Science and Technology at the Wuhan University.
   
 ##Homeworks
 
@@ -10,5 +14,5 @@
   
 ##Other
 
-   Your advice or suggestions are highly appreciated!
+   Your advice or suggestions are highly appreciated！
   
