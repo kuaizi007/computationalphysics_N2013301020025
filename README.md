@@ -2,4 +2,4 @@
 
 ## 作业
   
-  	所有作业都列在[exercise](exercise)里面
+  	[exercise3](exercise3.md)里面
