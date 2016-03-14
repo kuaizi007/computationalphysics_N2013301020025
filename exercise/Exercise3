@@ -1,14 +1,51 @@
-##摘要    
-
-
-##背景介绍    
-
-
-##正文    
-
-
-##结论  
-
-
-##致谢  
-
+sapce=[
+'       ',
+'       ',
+'       ',
+'       ',
+'       ']
+B=[
+' ****  ',
+' *   * ',
+' ****  ',
+' *   * ',
+' ****  ']
+O=[
+'  ***  ',
+' *   * ',
+' *   * ',
+' *   * ',
+'  ***  ']
+S=[
+'  **** ',
+' *     ',
+'  ***  ',
+'     * ',
+' ****  ']    
+H=[
+' *   * ',
+' *   * ',
+' ***** ',
+' *   * ',
+' *   * '] 
+E=[
+'  ***  ',
+' *   * ',
+' *   * ',
+' *   * ',
+'  ***  ']
+N=[
+' *   * ',
+' **  * ',
+' * * * ',
+' *  ** ',
+' *   * ']
+word = {' ':space,'b':B,'o':O,'s':S,'h':H,'e':E,'n':N}
+letters= raw_input('please type letters from 'BOSHEN'').lower()
+len= len(letter)
+letters_print = ''
+for i in range(5):
+    for j in range(len):
+        letters_print = letters_print + word[letters[j]][i]
+    print letters_print
+while True: input()
