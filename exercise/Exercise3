@@ -1,23 +1,23 @@
-## Code
+## level2
 
-```python
 _=['       ','       ','       ','       ','       ']
 B=[' ****  ',' *   * ',' ****  ',' *   * ',' ****  ']
 O=['  ***  ',' *   * ',' *   * ',' *   * ','  ***  ']
 S=['  **** ',' *     ','  ***  ','     * ',' ****  ']    
 H=[' *   * ',' *   * ',' ***** ',' *   * ',' *   * '] 
-E=[' ***** ',' *    ', ' ***** ',' *    ',' *****  ']
-N=[' *   * ',' **  * ',' * * * ',' *  ** ',' *   * ']
+E=[' ***** ',' *     ', ' *****',' *     ',' ***** ']
+N=[' *   * ',' **  * ','  * * *',' *  ** ',' *   * ']
+repository = {' ':_,'b':B,'o':O,'s':S,'h':H,'e':E,'n':N}
 
-word = {' ':_,'b':B,'o':O,'s':S,'h':H,'e':E,'n':N}
 letters= raw_input('please type letters from "boshen" ').lower()
-length= len(letters)
+l= len(letters)
 
-for j in range(5):    
-    line_print = [' ']*5
-    for i in range(length):
-        line_print[j]=line_print[j]+word[letters[i]][j]
-    print line_print[j]
+for y in range(5):    
+    letters_print =_
+    for x in range(l):
+        letters_print[y]+=repository[letters[x]][y]
+    print letters_print[y]
     
 while True: input()
-```
+
+## level3
