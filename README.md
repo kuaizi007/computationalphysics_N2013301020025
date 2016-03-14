@@ -6,7 +6,7 @@
   
 ##About
 
-  I'm Hu Boshen, a junior in the Department of Physical Science and Technology at Wuhan University. Here is my Email: 2013301020025 [at] whu [dot] edu [dot] cn. And if you perfer a face-to-face academical conversation, please head for my dormitory Room 404 in Guiyuan Building 7. I welcome your contact or visit！
+  I'm Hu Boshen, a junior in the Department of Physical Science and Technology at Wuhan University. Here is my Email: 2013301020025 [at] whu [dot] edu [dot] cn. And if you perfer a face-to-face academical conversation, please head for my dormitory Room 404 in Guiyuan Building 7. I welcome your contact or visit!
   
 ##Assignments
 
