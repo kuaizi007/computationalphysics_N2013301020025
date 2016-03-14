@@ -1,4 +1,4 @@
-##level2
+## level2
        
      _=['       ','       ','       ','       ','       ']
      B=[' ****  ',' *   * ',' ****  ',' *   * ',' ****  ']
@@ -19,6 +19,5 @@
          print letters_pixel[y]
     
      while True: input()
-       
 
 ## level3
