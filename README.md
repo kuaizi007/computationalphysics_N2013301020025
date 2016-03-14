@@ -14,5 +14,5 @@
   
 ##Other
   
-  It's noteworthy that acknowledgement of my codes is indispensable when you use it for reference. Meanwhile, your advice or suggestions are highly appreciated.
+  It's noteworthy that acknowledgement of my code is indispensable when you use it for reference. Meanwhile, your advice or suggestions are highly appreciated.
   
