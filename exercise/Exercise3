@@ -1,51 +1,23 @@
-sapce=[
-'       ',
-'       ',
-'       ',
-'       ',
-'       ']
-B=[
-' ****  ',
-' *   * ',
-' ****  ',
-' *   * ',
-' ****  ']
-O=[
-'  ***  ',
-' *   * ',
-' *   * ',
-' *   * ',
-'  ***  ']
-S=[
-'  **** ',
-' *     ',
-'  ***  ',
-'     * ',
-' ****  ']    
-H=[
-' *   * ',
-' *   * ',
-' ***** ',
-' *   * ',
-' *   * '] 
-E=[
-'  ***  ',
-' *   * ',
-' *   * ',
-' *   * ',
-'  ***  ']
-N=[
-' *   * ',
-' **  * ',
-' * * * ',
-' *  ** ',
-' *   * ']
-word = {' ':space,'b':B,'o':O,'s':S,'h':H,'e':E,'n':N}
-letters= raw_input('please type letters from 'BOSHEN'').lower()
-len= len(letter)
-letters_print = ''
-for i in range(5):
-    for j in range(len):
-        letters_print = letters_print + word[letters[j]][i]
-    print letters_print
+##Code
+
+```python
+_=['       ','       ','       ','       ','       ']
+B=[' ****  ',' *   * ',' ****  ',' *   * ',' ****  ']
+O=['  ***  ',' *   * ',' *   * ',' *   * ','  ***  ']
+S=['  **** ',' *     ','  ***  ','     * ',' ****  ']    
+H=[' *   * ',' *   * ',' ***** ',' *   * ',' *   * '] 
+E=[' ***** ',' *    ', ' ***** ',' *    ',' *****  ']
+N=[' *   * ',' **  * ',' * * * ',' *  ** ',' *   * ']
+
+word = {' ':_,'b':B,'o':O,'s':S,'h':H,'e':E,'n':N}
+letters= raw_input('please type letters from "boshen" ').lower()
+length= len(letters)
+
+for j in range(5):    
+    line_print = [' ']*5
+    for i in range(length):
+        line_print[j]=line_print[j]+word[letters[i]][j]
+    print line_print[j]
+    
 while True: input()
+```
