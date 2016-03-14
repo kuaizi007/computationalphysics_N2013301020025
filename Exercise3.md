@@ -91,7 +91,6 @@
     	i = os.system('cls')
  
 	life(world,100)
-	while True: input()	
 
 ## Reference
 
