@@ -33,7 +33,7 @@
 
 ## *level3 : Conway's Game of Life*
 ###Abstract
-   I used to realize Conway's Game of Life in C or C++. Unfortunately it always turns out my try and error. Having devoted hours to debug this code, I render it to meet my standards eventually.
+   I used to realize Conway's Game of Life in C or C++. Unfortunately, it always turns out that honing my programming skills is definetely necessary. Having devoted hours to debugging this code, I render it to attain my standards successfully.
 
 ###Background 
 
@@ -54,7 +54,7 @@
 
 > For instance, the queen bee shuttle (or basic shuttle
 ) is a period 30 shuttle oscillator in which a queen bee travels back and forth between two stabilizing ends. It was found by Bill Gosper in 1970 and was the first period 30 oscillator to be found.                            
-![the queen bee shuttle](https://github.com/endeavor19/computationalphysics_N2013301020025/blob/master/gof.gif)－－Wikipedia
+![the queen bee shuttle](https://github.com/endeavor19/computationalphysics_N2013301020025/blob/master/gof.gif)——Wikipedia
 
 ###Code
 	from collections import defaultdict
@@ -74,7 +74,7 @@
 	    return [(x+dx, y+dy) for dx in r for dy in r if not (dx, dy) == (0, 0)]
 	 
 	def frequencies(cells):
-	    res = defaultdict(int) # Avoid KeyErrors of non-existent keys.
+	    res = defaultdict(int)  # To avoid KeyErrors
 	    for cell in cells:
 	        res[cell] += 1
 	    return res
