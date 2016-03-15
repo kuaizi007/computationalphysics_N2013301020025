@@ -33,7 +33,7 @@
 
 ## *level3 : Conway's Game of Life*
 ###Abstract
-   I used to realize Conway's Game of Life in C or C++. But it always turns out my try and error. Having devoted hours to debug this code, I render it to meet my standards eventually.
+   I used to realize Conway's Game of Life in C or C++. Unfortunately it always turns out my try and error. Having devoted hours to debug this code, I render it to meet my standards eventually.
 
 ###Background 
 
