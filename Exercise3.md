@@ -90,7 +90,10 @@
     	sleep(0.03)
     	i = os.system('cls')
  
-	life(world,100)
+	life(world,200)
+	
+###Display
+   ![queen bee shuttle](https://raw.githubusercontent.com/endeavor19/computationalphysics_N2013301020025/master/gof.gif )
 
 ## Reference
 
