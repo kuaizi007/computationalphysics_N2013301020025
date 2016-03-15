@@ -8,7 +8,7 @@
 
 ## *level1&2 : Print My Name*
 ###Abstract
-   Theoretically, this code is capable of printing all letters from "A" to "Z" in a dot pattern. However, I spend my time mainly to level3, which represents my enthusiasm for Python. Therefore here lies  my semi-manufactured code only to print my name in an arbitrary sequence.
+   Theoretically, this code(if finished) is capable of printing all letters from "A" to "Z" in a dot pattern. However, I spend my time mainly on level3, which evidently represent my enthusiasm for Python. Therefore here lies my semi-manufactured code only to print my name in an arbitrary sequence.
 
 ### Code   
      _=['       ','       ','       ','       ','       ']
@@ -97,7 +97,7 @@
 	        
 	runLife(50,20,30,NAME)
 ###Display
-   
+![LEVEL3](https://github.com/endeavor19/computationalphysics_N2013301020025/blob/master/level3.gif)
 
 ## Reference
 
