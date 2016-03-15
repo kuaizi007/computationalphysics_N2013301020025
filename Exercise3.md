@@ -87,7 +87,7 @@
     	sleep(0.03)
     	i = os.system('cls')
  
-	life(world,100)
+	life(world,200)
 	while True: input()	
 ###Display
    ![](https://github.com/endeavor19/computationalphysics_N2013301020025/blob/master/gof.gif)
