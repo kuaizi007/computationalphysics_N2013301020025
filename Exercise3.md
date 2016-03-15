@@ -8,7 +8,7 @@
 
 ## *level1&2 : Print My Name*
 ###Abstract
-   Theoretically, this code(if finished) is capable of printing all letters from "A" to "Z" in a dot pattern. However, I spend my time mainly on level3, which evidently represent my enthusiasm for Python. Therefore here lies my semi-manufactured code only to print my name in an arbitrary sequence.
+   Theoretically, this code(if finished) is capable of printing all letters from "A" to "Z" in a dot pattern. However, I spend my time mainly on level3, which evidently represents my enthusiasm for Python. Therefore here lies my semi-manufactured code only to print my name in an arbitrary sequence.
 
 ### Code   
      _=['       ','       ','       ','       ','       ']
