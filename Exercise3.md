@@ -8,7 +8,7 @@
 
 ## *level1&2 : Print My Name*
 ###Abstract
-   Theoretically, this code(if finished) is capable of printing all letters from "A" to "Z" in a dot pattern. However, I spend my time mainly on level3, which evidently represents my enthusiasm for Python. Therefore here lies my semi-manufactured code only to print my name in an arbitrary sequence.
+   Theoretically, this code(if finished) is capable of printing all letters from "A" to "Z" in a dot pattern. However, I spend my time mainly on level3, which evidently represents my enthusiasm for Python. Therefore, listed as follows is my semi-manufactured code only to print my name in an arbitrary sequence.
 
 ### Code   
      _=['       ','       ','       ','       ','       ']
@@ -33,7 +33,7 @@
 
 ## *level3 : Conway's Game of Life*
 ###Abstract
-   I used to realize Conway's Game of Life in C or C++. Unfortunately, it always turns out that honing my programming skills is definetely necessary. Having devoted hours to debugging this code, I render it to attain my standards successfully.
+   I used to realize Conway's Game of Life in C or C++. Unfortunately, it always turns out that honing my programming skills is definetely necessary. Howerer, having devoted considerable hours to debugging this code, I render it to attain my standards successfully.
 
 ###Background 
 
