@@ -8,25 +8,10 @@
 
 ## *level1&2 : Print My Name*
 ### Code    
-     _=['       ','       ','       ','       ','       ']
-     B=[' ****  ',' *   * ',' ****  ',' *   * ',' ****  ']
-     O=['  ***  ',' *   * ',' *   * ',' *   * ','  ***  ']
-     S=['  **** ',' *     ','  ***  ','     * ',' ****  ']    
-     H=[' *   * ',' *   * ',' ***** ',' *   * ',' *   * '] 
-     E=[' ***** ',' *     ', ' *****',' *     ',' ***** ']
-     N=[' *   * ',' **  * ','  * * *',' *  ** ',' *   * ']
-     repository = {' ':_,'b':B,'o':O,'s':S,'h':H,'e':E,'n':N}
+     [Print My Name](https://github.com/endeavor19/computationalphysics_N2013301020025/blob/master/py/Print%20My%20Name.py)
+     
+### Display
 
-     letters= raw_input('please type letters from "boshen" ').lower()
-     l= len(letters)
-
-     for y in range(5):    
-         letters_pixel =_
-         for x in range(l):
-             letters_pixel[y]+=repository[letters[x]][y]
-         print letters_pixel[y]
-    
-     while True: input()
 
 ## *level3 : Conway's Game of Life*
 
