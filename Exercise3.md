@@ -52,13 +52,9 @@
 ) is a period 30 shuttle oscillator in which a queen bee travels back and forth between two stabilizing ends. It was found by Bill Gosper in 1970 and was the first period 30 oscillator to be found.                            
 > ——Wikipedia ![](http://www.conwaylife.com/w/images/c/c2/Queenbeeshuttle.png "Queen bee shuttle")
 
-###Abstract
-1. Populate the cells with the keys leading to life.
-1. Offset all the cells by delta, a (dx, dy) vector.
-1. Generates the next interation of cells from the existing one.
-
 
 ###Code
+	
 	from collections import Counter
 	from time import sleep
 	import os
@@ -68,6 +64,7 @@
 	                     ( 1, -1), ( 1, 0), ( 1, 1)]
 	block   = {(0, 0), (1, 1), (0, 1), (1, 0)}
 	world   = (offset(block, (5, 15)) | {(10, 15), (13, 15), (13, 14),(13, 16),(11, 14),(11, 16),(12, 13),(14, 13),(14, 12),(14, 17),(14, 18), (12, 17)} | offset(block, (25, 15)))
+   				#Set the coordinates of initial world.
 
 	def life(world, N):
     	for g in range(N+1):
@@ -75,11 +72,13 @@
         	counts = Counter(n for c in world for n in offset(neighboring_cells, c))
         	world = {c for c in counts 
                 if counts[c] == 3 or (counts[c] == 2 and c in world)} 
+                # Apply the Game Of Life rule set to every cell.
  
 	def offset(cells, delta):
     	(dx, dy) = delta
     	return {(x+dx, y+dy) for (x, y) in cells}
- 
+ 				# Offset all the cells by delta, a (dx, dy) vector.
+
 	def display(world, g):
     	print '          GENERATION {}:'.format(g)
     	Xs, Ys = zip(*world)
