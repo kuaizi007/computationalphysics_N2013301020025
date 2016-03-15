@@ -96,4 +96,4 @@
 
 - [pikipity: 用 Pygame 编写的生命游戏](http://pikipity.github.io/blog/the-game-of-life-using-pygame.html )
 - [Rosetta Code: Conway's Game of Life](http://rosettacode.org/wiki/Conway%27s_Game_of_Life#Python)
-- [Allen B. Downey: Think Python: How to Think Like a Computer Scientist](http://greenteapress.com/wp/think-python/ )
+- Allen B. Downey：[ Think Python: How to Think Like a Computer Scientist](http://greenteapress.com/wp/think-python/ )
