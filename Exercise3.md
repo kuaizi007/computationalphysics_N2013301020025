@@ -54,7 +54,7 @@
 
 > For instance, the queen bee shuttle (or basic shuttle
 ) is a period 30 shuttle oscillator in which a queen bee travels back and forth between two stabilizing ends. It was found by Bill Gosper in 1970 and was the first period 30 oscillator to be found.                            
-![the queen bee shuttle](https://github.com/endeavor19/computationalphysics_N2013301020025/blob/master/gof.gif)
+![the queen bee shuttle](https://github.com/endeavor19/computationalphysics_N2013301020025/blob/master/gof.gif)－－Wikipedia
 
 ###Code
 	from collections import defaultdict
