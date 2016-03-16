@@ -8,7 +8,7 @@
 
 ## *level1&2 : Print My Name*
 ###Abstract
-   Theoretically, this code(if finished) is capable of printing all letters from "A" to "Z" in a dot pattern. However, I spend my time mainly on level3, which evidently represents my enthusiasm for Python. Therefore, listed as follows is my semi-manufactured code only to print my name in an arbitrary sequence.
+   Theoretically, this code(if finished) is capable of printing all letters from "A" to "Z" in a dot pattern. However, I spend my time mainly on level3, which evidently represents my enthusiasm for Python. So listed as follows is my semi-manufactured code only to print my name in an arbitrary sequence.
 
 ### Code   
      _=['       ','       ','       ','       ','       ']
@@ -33,7 +33,7 @@
 
 ## *level3 : Conway's Game of Life*
 ###Abstract
-   I used to realize Conway's Game of Life in C or C++. Unfortunately, it always turns out that honing my programming skills is definetely necessary. Howerer, having devoted considerable hours to debugging this code, I render it to attain my standards successfully.
+   I used to realize Conway's Game of Life in C or C++. Unfortunately, it always turns out that honing my programming skills is definetely necessary. Devoted considerable hours to debugging this code, however, I succeed to materialize the boardless word of Conway's Game of Life by means of "defaultdict".Additionally, the size of world as well as the initial state is adjustable.
 
 ###Background 
 
@@ -71,7 +71,7 @@
 	def neighbors(cell):
 	    x,y = cell
 	    r = range(-1,2)
-	    return [(x+dx, y+dy) for dx in r for dy in r if not (dx, dy) == (0, 0)]
+	    return [(x+dx, y+dy) for dx in r for dy in r if (dx, dy) != (0, 0)]
 	 
 	def frequencies(cells):
 	    res = defaultdict(int)  # To avoid KeyErrors
