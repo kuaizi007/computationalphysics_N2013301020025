@@ -33,7 +33,7 @@
 
 ## *level3 : Conway's Game of Life*
 ###Abstract
-   I used to realize Conway's Game of Life in C or C++. Unfortunately, it always turns out that honing my programming skills is definetely necessary. By means of "defaultdict", I succeed to materialize the boardless world of Conway's Game of Life by means of "defaultdict" so that the size of world as well as the initial state is adjustable.
+   Following the methodology of block-based programming, I succeed to materialize the boardless world of Conway's Game of Life with "defaultdict", which avoids occurrence of non-existent keys so that the size of world becomes adjustable.
 
 ###Background 
 
@@ -72,22 +72,21 @@
 	    x,y = cell 
 	    r = range(-1,2)    
 	    return [(x+dx, y+dy) for dx in r for dy in r if (dx, dy) != (0, 0)]
-	    # Enumerate 8 directions to get the neighboring cells.
+	    # Enumerate 8 directions to get the neighbors.
 	 
 	def frequencies(cells):
-	    res = defaultdict(int)  # Use defaultdict to avoid Keyerrors.
+	    u = defaultdict(int)  # Use defaultdict to avoid Keyerror.
 	    for cell in cells:
-	        res[cell] += 1  # 
-	    return res
+	        u[cell] += 1  # Count the cells.
+	    return u
 	 
 	def nextstep(cells):
-	    freqs = frequencies([n for c in cells for n in neighbors(c)])  
-	    # Culculate the number of neighbors to determine the next state of the cell.
-	    return [k for k in freqs if freqs[k]==3 or (freqs[k]==2 and k in cells)]
+	    freqs = frequencies([n for c in cells for n in neighbors(c)])  # count the neighboring cells 
+	    return [k for k in freqs if freqs[k]==3 or (freqs[k]==2 and k in cells)] # Determine the next state of cells accronding to the number of neighbors.
 	 
 	def display(cells, Xs, Ys):
 	    for y in range(0, Ys+1):
-	        print ''.join('#' if (x, y) in cells else '.' for x in range(0, Xs+1))
+	        print ''.join('#' if (x, y) in cells else for x in range(0, Xs+1))  # Connect '#' with '.' to display the whole world.
 	    sleep(0.07)
 	    i = os.system('cls')
 	 
