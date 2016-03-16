@@ -33,7 +33,7 @@
 
 ## *level3 : Conway's Game of Life*
 ###Abstract
-   I used to realize Conway's Game of Life in C or C++. Unfortunately, it always turns out that honing my programming skills is definetely necessary. By means of "defaultdict", I succeed to materialize the boardless word of Conway's Game of Life by means of "defaultdict".Additionally, the size of world as well as the initial state is adjustable.
+   I used to realize Conway's Game of Life in C or C++. Unfortunately, it always turns out that honing my programming skills is definetely necessary. By means of "defaultdict", I succeed to materialize the boardless world of Conway's Game of Life by means of "defaultdict" so that the size of world as well as the initial state is adjustable.
 
 ###Background 
 
@@ -94,7 +94,7 @@
 	def Life(Xs, Ys, steps, cells):
 	    display(cells, Xs, Ys)
 	    if 0 < steps:
-	        runLife(Xs, Ys, steps-1, nextstep(cells))
+	        Life(Xs, Ys, steps-1, nextstep(cells))
 	        
 	Life(50,20,130,NAME)
 ###Display
