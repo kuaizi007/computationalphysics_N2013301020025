@@ -26,7 +26,7 @@
      for y in range(5):    
          letters_pixel =_
          for x in range(l):
-             letters_pixel[y]+=repository[letters[x]][y]
+             letters_pixel[y] += repository[letters[x]][y]
          print letters_pixel[y]
     
      while True: input()
@@ -81,7 +81,7 @@
 	    return u
 	 
 	def nextstep(cells):
-	    freqs = frequencies([n for c in cells for n in neighbors(c)])  # count the neighboring cells 
+	    freqs = frequencies([n for c in cells for n in neighbors(c)])  # Count the neighboring cells.
 	    return [k for k in freqs if freqs[k]==3 or (freqs[k]==2 and k in cells)] # Determine the next state of cells accronding to the number of neighbors.
 	 
 	def display(cells, Xs, Ys):
