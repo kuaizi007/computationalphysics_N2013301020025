@@ -11,7 +11,7 @@
    Theoretically, this code(if finished) is capable of printing all letters from "A" to "Z" in a dot pattern. However, I spend my time mainly on level3, which evidently represents my enthusiasm for Python. So listed as follows is my semi-manufactured code only to print my name in an arbitrary sequence.
 
 ### Code   
-        _=['       ','       ','       ','       ','       ']
+    _=['       ','       ','       ','       ','       ']
  	B=[' ****  ',' *   * ',' ****  ',' *   * ',' ****  ']
  	O=['  ***  ',' *   * ',' *   * ',' *   * ','  ***  ']
  	S=['  **** ',' *     ','  ***  ','     * ',' ****  ']    
