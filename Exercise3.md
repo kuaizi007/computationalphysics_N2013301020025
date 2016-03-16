@@ -84,10 +84,9 @@
 	    return [k for k in freqs if freqs[k]==3 or (freqs[k]==2 and k in cells)]
 	 
 	def printWorld(cells, Xs, Ys):
-	    for y in range(0, Ys):
-	        print ''.join('#' if (x, y) in cells else '.'
-	                      for x in range(0, Xs))
-	    sleep(1)
+	    for y in range(0, Ys+1):
+	        print ''.join('#' if (x, y) in cells else '.' for x in range(0, Xs+1))
+	    sleep(0.07)
 	    i = os.system('cls')
 	 
 	def runLife(Xs, Ys, steps, cells):
@@ -95,7 +94,7 @@
 	    if 0 < steps:
 	        runLife(Xs, Ys, steps-1, lifeStep(cells))
 	        
-	runLife(50,20,30,NAME)
+	runLife(50,20,130,NAME)
 ###Display
 ![LEVEL3](https://github.com/endeavor19/computationalphysics_N2013301020025/blob/master/level3.gif)
 
