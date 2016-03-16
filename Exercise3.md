@@ -96,7 +96,7 @@
 	    	i = os.system('cls')
 	        Life(Xs, Ys, steps-1, nextstep(cells))
 	        
-	Life(50,20,182,NAME)
+	Life(50,20,192,NAME)
 	while True: input()
 	
 ###Display
