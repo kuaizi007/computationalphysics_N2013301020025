@@ -33,7 +33,7 @@
 
 ## *level3 : Conway's Game of Life*
 ###Abstract
-   I used to realize Conway's Game of Life in C or C++. Unfortunately, it always turns out that honing my programming skills is definetely necessary. Devoted considerable hours to debugging this code, however, I succeed to materialize the boardless word of Conway's Game of Life by means of "defaultdict".Additionally, the size of world as well as the initial state is adjustable.
+   I used to realize Conway's Game of Life in C or C++. Unfortunately, it always turns out that honing my programming skills is definetely necessary. By means of "defaultdict", I succeed to materialize the boardless word of Conway's Game of Life by means of "defaultdict".Additionally, the size of world as well as the initial state is adjustable.
 
 ###Background 
 
@@ -69,32 +69,34 @@
 	NAME = L1 + L2 + L3 + L4 + L5
 	
 	def neighbors(cell):
-	    x,y = cell
-	    r = range(-1,2)
+	    x,y = cell 
+	    r = range(-1,2)    
 	    return [(x+dx, y+dy) for dx in r for dy in r if (dx, dy) != (0, 0)]
+	    # Enumerate 8 directions to get the neighboring cells.
 	 
 	def frequencies(cells):
-	    res = defaultdict(int)  # To avoid KeyErrors
+	    res = defaultdict(int)  # Use defaultdict to avoid Keyerrors.
 	    for cell in cells:
-	        res[cell] += 1
+	        res[cell] += 1  # 
 	    return res
 	 
-	def lifeStep(cells):
-	    freqs = frequencies([n for c in cells for n in neighbors(c)])
+	def nextstep(cells):
+	    freqs = frequencies([n for c in cells for n in neighbors(c)])  
+	    # Culculate the number of neighbors to determine the next state of the cell.
 	    return [k for k in freqs if freqs[k]==3 or (freqs[k]==2 and k in cells)]
 	 
-	def printWorld(cells, Xs, Ys):
+	def display(cells, Xs, Ys):
 	    for y in range(0, Ys+1):
 	        print ''.join('#' if (x, y) in cells else '.' for x in range(0, Xs+1))
 	    sleep(0.07)
 	    i = os.system('cls')
 	 
-	def runLife(Xs, Ys, steps, cells):
-	    printWorld(cells, Xs, Ys)
+	def Life(Xs, Ys, steps, cells):
+	    display(cells, Xs, Ys)
 	    if 0 < steps:
-	        runLife(Xs, Ys, steps-1, lifeStep(cells))
+	        runLife(Xs, Ys, steps-1, nextstep(cells))
 	        
-	runLife(50,20,130,NAME)
+	Life(50,20,130,NAME)
 ###Display
 ![LEVEL3](https://github.com/endeavor19/computationalphysics_N2013301020025/blob/master/level3.gif)
 
