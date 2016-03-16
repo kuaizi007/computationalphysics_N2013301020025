@@ -87,9 +87,8 @@
 	 
 	def display(cells, Xs, Ys):
 	    for y in range(Ys):
-	        print ''.join('#' if (x, y) in cells else '' for x in range(Xs))  # Connect '#' with ' ' to display the whole world.
+	        print ''.join('#' if (x, y) in cells else '' for x in range(Xs))  # Connect '#' with ' ' to display cells.
 	    sleep(0.03)
-	    i = os.system('cls')
 	 
 	def Life(Xs, Ys, steps, cells):
 	    display(cells, Xs, Ys)
