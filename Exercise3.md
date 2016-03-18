@@ -162,7 +162,7 @@
 ###Display
 ![LEVEL3](https://github.com/endeavor19/computationalphysics_N2013301020025/blob/master/level3.gif)
 
-##Acknowledgments
+##Acknowledgment
 Thanks to [Ron89](https://github.com/Ron89), who aroused my appetite for further reading material on [Cellular Automata](http://www.worldscientific.com/worldscibooks/10.1142/4702) and [Complexity Science](http://www.worldscientific.com/series/scs).
 
 ## Reference
