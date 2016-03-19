@@ -6,20 +6,19 @@
 - 作业L2 在屏幕上用字符拼出任意次序的姓名
 - 作业L3 在80*80点阵上用字符拼出你想画的东西，希望脑洞大开！（比如字符，火柴人，实现移动、旋转等等）
 
-## *level1&2 : Print My Name*
+## *level1&2 : *
 ###Abstract
    Theoretically, this code(if finished) is capable of printing all letters from "A" to "Z" in a dot pattern. However, I spend my time mainly on level3, which evidently represents my enthusiasm for Python. So listed as follows is my semi-manufactured code only to print my name in an arbitrary sequence.
 
 ### Code   
-	from collections import Counter 
 	from time import sleep
 	import os
 	
-	B =[(9, 8), (6, 8), (7, 8), (8, 8),(6, 9), (10, 9),(6, 10), (7, 10), (8, 10), (9, 10),(6, 11), (10,11),(6, 12), (7, 12), (8, 12), (9, 12)]
+	B =[(3, 8)]
 	O =[(14, 8), (15, 8), (16, 8),(17, 9), (13, 9),(13, 10), (17, 10),(13, 11), (17, 11), (16, 12), (15, 12), (14, 12)]
 	S =[(21, 8), (22, 8), (23, 8), (24, 8),  (20, 9),(23, 10), (22, 10), (21, 10),(24, 11),(21, 12),(20, 12), (22, 12), (23, 12)]
 	H =[(27, 8), (31, 8), (27, 9), (31, 11), (27, 11), (27, 12), (31, 12),(27, 10), (28, 10), (29, 10), (30, 10), (31, 10)]
-	E =[(34, 8), (35, 8), (36, 8), (37, 8), (38, 8),(34, 9), (34, 10), (35, 10), (36, 10), (37, 10), (38, 	10),(34, 11),(34,12),(35,12),(36,12),(37,12),(38,12)]
+	E =[(34, 8), (35, 8), (36, 8), (37, 8), (38, 8),(34, 9), (34, 10), (35, 10), (36, 10), (37, 10), (38,   10),(34, 11),(34,12),(35,12),(36,12),(37,12),(38,12)]
 	N = [(41, 11), (41, 8),(41, 9),(45, 8),(42, 9), (45, 9),(45, 10), (43, 10), (41, 10),(44, 11), (45, 11),(45, 12),(41,12)]
 	
 	direction =  [  ( 1, 1),
@@ -29,66 +28,74 @@
 	                ( 1, 1),
 	                ( -1,1),
 	                        ] # reserve 2 more directions
+	global book,steps
 	
-	def res(pixel,Worldsize,u):
+	book=[]
+	
+	def res_1(pixel,Worldsize,aim):
 	    x,y = pixel
-	    aim = u
+	    aim = book[pixel]
+	    L = Worldsize - 1
+	    if(x==y):
+	        if(aim+2 >3):
+	            aim -= 2
+	        else:
+	            aim += 2
+	        return aim
+	    else:
+	        for i in range(4):
+	            mark=[0]*6
+	            x,y = pixel
+	            (dx, dy) = direction[i]
+	            x,y =(x+dx, y+dy)
+	            if (aim+2 >3):
+	                mark[aim-2]=1
+	            else :
+	                 mark[aim+2]=1
+	            if ( x<0 or  x>L+1 or  y<0 or y>L+1 ):
+	                continue
+	            elif (mark[i]==1):
+	                continue
+	            else:
+	                aim=i
+	                break
+	        return aim
+	
+	def res_2(letter,Worldsize,book):
+	    for c in letter:
+	        book[c] = res_1(c,Worldsize,book[c])
+	    return book
+	 
+	def move(pixel,Worldsize,aim):
+	    aim = book[pixel]
+	    x,y = pixel
 	    L = Worldsize - 1
 	    if( x<1 or  x>L or  y<1 or y>L ):
-	        if(x==y):
-	            if(aim+2 >3):
-	                aim -= 4
-	            else:
-	                aim += 2
-	        else:
-	            for i in range(4):
-	                book=[0]*6
-	                x,y = pixel
-	                (dx, dy) = direction[i]
-	                x,y =(x+dx, y+dy)
-	                if (aim+2 >3):
-	                    aim -= 2
-	                    book[aim+2]=1
-	                else :
-	                    book[aim+2]=1
-	                if ( x<1 or  x>L or  y<1 or y>L ):
-	                    continue
-	                elif (book[i]==1):
-	                    book[i]=0
-	                    continue
-	                else:
-	                    aim=i
-	                    break
-	        return aim
-	    else:  
-	        return aim
-	
-	def move(pixel,Worldsize,u):
-	    x,y = pixel
-	    u = res(pixel,Worldsize,u)
+	            u = res_1(pixel,Worldsize,aim)
+	    else :  u = aim 
 	    dx, dy = direction[u]
 	    x,y =(x+dx, y+dy)
 	    return [(x,y)]
-	    
-	def nextstep(letter,Worldsize):
-	    u = Counter([ n for c in letter for n in move(c,Worldsize,aim)])
+	
+	def nextstep(letter,Worldsize,book):
+	    u = [ n for c in letter for n in move(c,Worldsize,book[c])]
 	    return [k for k in u ]
-	    	
-	    
+	
+	
 	def display(letter, Worldsize):
 	    for y in range(Worldsize+1):
 	        print ''.join('*' if (x, y) in letter else ' ' for x in range(Worldsize+1))
 	
-	def run(Worldsize, steps,letter):
-	    display(letter,Worldsize)
-	    if 0 < steps:
-	        i = os.system('cls')
-	        run(Worldsize, steps-1, nextstep(letter,Worldsize))
-	
-	global aim
-	aim=0
-	run(15,15,S)
+	def run(Worldsize,steps,letter):     
+	    display(Worldsize,letter)
+	    
+	if steps > 0 :
+	        u = res_2(letter,Worldsize,book)
+	        run(Worldsize, steps-1, nextstep(letter,Worldsize,u))
+	        
+	run(15,10,B)
 	while True: input()
+	
 
 
 ## *level3 : Conway's Game of Life*
