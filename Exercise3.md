@@ -8,7 +8,7 @@
 
 ## level1&2 : Reflect My Name *To be continued*
 ###Abstract
-   Theoretically, this code(if finished) is capable of printing all letters from "A" to "Z" in a dot pattern. However, I spend my time mainly on level3, which evidently represents my enthusiasm for Python. So listed as follows is my semi-manufactured code only to print my name in an arbitrary sequence.
+   Theoretically, this code(if finished) is capable of printing all letters from "A" to "Z" in a dot pattern. However, I spend my time mainly on level3, which evidently represents my enthusiasm for Python. So listed as follows is my semi-manufactured code only to print my name with the effect of specular reflection.
 
 ### Code   
 	from time import sleep
@@ -132,10 +132,11 @@
 	    x,y = cell 
 	    r = range(-1,2)  
 	    return [(x+dx, y+dy) for dx in r for dy in r if (dx, dy) != (0, 0)]
-		# Enumerate 8 directions to get the neighbors.
+	    	# Enumerate 8 directions to get the neighbors.
 	
 	def frequencies(cells):
-	    u = defaultdict(int)  # Use defaultdict to avoid Keyerror.
+	    u = defaultdict(int)  
+	    	# Use defaultdict to avoid Keyerror.
 	    for cell in cells:
 	        u[cell] += 1  
 	    return u
