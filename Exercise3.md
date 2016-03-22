@@ -146,8 +146,7 @@
 	    freqs = frequencies([n for c in cells for n in neighbors(c)])  
 	    	# Count the neighboring cells.
 	    return [k for k in freqs if freqs[k]==3 or (freqs[k]==2 and k in cells)] 
-		# Determine the next state of cells accronding to the number of neighbors.
-	 
+	    
 	def display(cells, Xs, Ys):
 	    for y in range(Ys):
 	        print ''.join('*' if (x, y) in cells else ' ' for x in range(Xs)			
