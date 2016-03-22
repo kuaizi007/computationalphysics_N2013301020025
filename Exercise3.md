@@ -11,8 +11,8 @@
    Theoretically, this code(if finished) is capable of printing all letters from "A" to "Z" in a dot pattern. However, I spend my time mainly on level3, which evidently represents my enthusiasm for Python. So listed as follows is my semi-manufactured code only to print my name with the effect of specular reflection.
 
 ### Code   
+	from collections import Counter
 	from time import sleep
-	from collections import Counter  
 	import os
 	
 	B =[(9, 8 ,0), (6, 8,0), (7, 8, 0), (8, 8,0),  (6, 9,0),  (10, 9,0), (6, 10,0), (7, 10,0), ( 8, 10,0), ( 9, 10,0), ( 6, 11,0), (10, 11,0), (6, 12,0), (7, 12,0), (8, 12,0), (9, 12,0)]
@@ -30,19 +30,19 @@
 	                ( -1,1),
 	                        ] # reserve 2 more directions
 	
-	def List(book,Worldsize):
-	    u = [ remove(c) for c in book]
+	def List(book,Xs,Ys):
+	    u = [remove(c) for c in book]
 	    return u
 	
-	def nextstep(book,Worldsize):
-	    u = [move(c,Worldsize) for c in book]
+	def nextstep(book,Xs,Ys):
+	    u = [move(c,Xs,Ys) for c in book]
 	    return u
 	 
-	def move(pixel,Worldsize):
+	def move(pixel,Xs,Ys):
 	    x,y,a = pixel
-	    L = Worldsize - 2
-	    if( x<2 or  x>L or  y<2 or y>L ):
-	        if(x==y):
+	    Xs,Ys = Xs - 2 ,Ys - 2
+	    if( x<2 or  x>Xs or  y<2 or y>Ys ):
+	        if( ( x == y and a == 2 ) or ( x - y  == Xs - Ys and a == 0 ) or ( x + y == Ys + 2 and a == 1) or ( x + y == Xs + 2 and a == 3 )):
 	            if(a+2 >3):
 	                a -= 2
 	            else:
@@ -57,14 +57,13 @@
 	                    mark[a-2]=1
 	                else :
 	                     mark[a+2]=1
-	                if ( x<1 or  x>L+1 or  y<1 or y>L+1 ):
+	                if ( x<1 or  x>Xs+1 or  y<1 or y>Ys+1 ):
 	                    continue
 	                elif (mark[i]==1):
 	                    continue
 	                else:
 	                    a=i
-	                    break
-	            return (x,y,a)
+	                    return (x,y,a)           
 	    dx, dy = direction[a]
 	    x,y  = x+dx, y+dy
 	    return (x,y,a)     
@@ -73,22 +72,24 @@
 	    x,y,a = pixel
 	    return (x,y)
 	
-	def display(book, Worldsize):
-	    for y in range(Worldsize+1):
-	        print ''.join('*' if (x, y) in List(book,Worldsize) else ' ' for x in range(Worldsize+1))
+	def display(book, Xs,Ys):
+	    for y in range(Ys+1):
+	        print ''.join('*' if (x, y) in List(book,Xs,Ys) else ' ' for x in range(Xs+1))
+	    sleep (0.03)
 	    i = os.system('cls')
-	    sleep(0.005)
+	 
 	    
-	def run(Worldsize,steps,book):     
-	    display(book,Worldsize)
+	def run(Xs,Ys,steps,book):     
+	    display(book,Xs,Ys)
 	    if steps > 0 :
-	        run(Worldsize, steps-1, nextstep(book,Worldsize))    
+	        run(Xs,Ys, steps-1, nextstep(book,Xs,Ys))    
 	
 	        
-	run(32,225,B+O+S+H+E+N)
+	run(60,20,2016,B+O+S+H+E+N)
+
+###Display
+	![LEVEL1&2](https://github.com/endeavor19/computationalphysics_N2013301020025/blob/master/level1&2.gif)
 	
-
-
 ## *level3 : Conway's Game of Life*
 ###Abstract
    Following the methodology of block-based programming, I succeed to materialize the boardless world of Conway's Game of Life with "defaultdict". This code uses defaultdict(int) to create dictionaries that return the result of int, in other words, 0 for any key not in the dictionary.
