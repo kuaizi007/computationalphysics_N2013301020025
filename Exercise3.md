@@ -88,7 +88,7 @@
 	run(60,20,2016,B+O+S+H+E+N)
 
 ###Display
-	![LEVEL1&2](https://github.com/endeavor19/computationalphysics_N2013301020025/blob/master/level1&2.gif)
+   ![LEVEL1&2](https://github.com/endeavor19/computationalphysics_N2013301020025/blob/master/level1%262.gif)
 	
 ## *level3 : Conway's Game of Life*
 ###Abstract
