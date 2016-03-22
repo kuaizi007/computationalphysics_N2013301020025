@@ -29,7 +29,7 @@ def move(pixel,Xs,Ys):
     x,y,a = pixel
     Xs,Ys = Xs - 2 ,Ys - 2
     if( x<2 or  x>Xs or  y<2 or y>Ys ):
-        if( ( x == y and a == 2 ) or ( x - y  == Xs - Ys and a == 0 ) or ( x + y == Ys + 2 and a == 1) or ( x + y == Xs + 2 and a == 3 )):
+        if(( x==y and a==2 ) or ( x-y  == Xs-Ys and a==0 ) or ( x+y == Ys+2 and a==1) or ( x+y == Xs+2 and a==3 )):
             if(a+2 >3):
                 a -= 2
             else:
