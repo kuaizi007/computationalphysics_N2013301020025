@@ -89,7 +89,8 @@
 
 ###Display
    ![LEVEL1&2](https://github.com/endeavor19/computationalphysics_N2013301020025/blob/master/level1%262.gif)
-	
+    [level1&2](https://github.com/endeavor19/computationalphysics_N2013301020025/blob/master/Reflect%20my%20name.py)
+    
 ## *level3 : Conway's Game of Life*
 ###Abstract
    Following the methodology of block-based programming, I succeed to materialize the boardless world of Conway's Game of Life with "defaultdict". This code uses defaultdict(int) to create dictionaries that return the result of int, in other words, 0 for any key not in the dictionary.
@@ -164,6 +165,7 @@
 	
 ###Display
 ![LEVEL3](https://github.com/endeavor19/computationalphysics_N2013301020025/blob/master/level3.gif)
+ [level3](https://github.com/endeavor19/computationalphysics_N2013301020025/blob/master/Conway's%20Life%20Game.py)
 
 ##Acknowledgment
 Thanks to [Ron89](https://github.com/Ron89), who aroused my appetite for further reading material on [Cellular Automata](http://www.worldscientific.com/worldscibooks/10.1142/4702) and [Complexity Science](http://www.worldscientific.com/series/scs).
